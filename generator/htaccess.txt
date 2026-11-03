@@ -1,0 +1,5 @@
+DirectoryIndex index.html
+<Files "config.php">
+  Require all denied
+</Files>
+RedirectMatch 403 ^.*/data/.*$

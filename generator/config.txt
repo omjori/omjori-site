@@ -1,0 +1,7 @@
+<?php
+// الصقي مفتاح Gemini بين العلامتين بدال PASTE_KEY_HERE
+return [
+  'key' => 'PASTE_KEY_HERE',
+  'daily_limit' => 400,
+  'ip_hour_limit' => 40,
+];
