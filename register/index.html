@@ -1,0 +1,53 @@
+<!doctype html><html lang="ar" dir="rtl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>التسجيل في ورشة بيع الملفات الرقمية</title>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;900&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Cairo,Tahoma,sans-serif;background:#FAF1ED;color:#311118;min-height:100vh}
+.wrap{max-width:520px;margin:0 auto;padding:24px 16px 50px}
+.top{text-align:center;margin-bottom:16px}
+.pill{display:inline-block;background:#fff;color:#E63872;font-weight:700;font-size:13px;padding:5px 14px;border-radius:30px;border:1px solid #F7CFDC}
+h1{font-size:27px;font-weight:900;margin:12px 0 6px;line-height:1.35}
+.when{display:inline-block;background:#fff;border:1.5px dashed #F7CFDC;border-radius:14px;padding:8px 14px;font-weight:700;font-size:16px;margin-top:6px}
+.card{background:#fff;border-radius:22px;padding:20px 16px;border:1.5px solid #F7CFDC;box-shadow:0 10px 30px rgba(230,56,114,.08)}
+label{display:block;font-weight:900;font-size:16px;margin:14px 0 7px}
+label:first-child{margin-top:0}
+label small{font-weight:400;color:#9a7580;font-size:13px}
+input{width:100%;font-family:inherit;font-size:17px;padding:13px 14px;border:2px solid #F7CFDC;border-radius:14px;background:#FAF1ED;outline:none;color:#311118}
+input:focus{border-color:#E63872;background:#fff}
+.ltr{direction:ltr;text-align:left}
+.go{width:100%;margin-top:20px;background:linear-gradient(135deg,#E63872,#E4537C);color:#fff;border:0;border-radius:18px;padding:16px;font-family:inherit;font-size:20px;font-weight:900;cursor:pointer;box-shadow:0 10px 24px rgba(230,56,114,.3)}
+.go:disabled{opacity:.6}
+.err{display:none;color:#c0244f;margin-top:12px;font-size:15px;text-align:center;font-weight:700}
+#ok{display:none;text-align:center}
+#ok .big{font-size:46px}
+#ok h2{font-size:24px;font-weight:900;margin:6px 0}
+#ok p{color:#7a5560;font-size:16px;line-height:1.8;margin-bottom:16px}
+.join{display:block;background:#311118;color:#fff;text-decoration:none;font-weight:900;padding:15px;border-radius:18px;font-size:18px}
+.foot{text-align:center;color:#b08e98;font-size:12px;margin-top:22px}
+</style></head><body><div class="wrap">
+<div class="top"><span class="pill">مجلس سيدات أعمال أبوظبي</span><h1>سجلي في ورشة<br>بيع الملفات الرقمية</h1><div class="when">⏰ الثلاثاء 3 نوفمبر · 4:30 – 6:30 العصر</div></div>
+<div class="card" id="form">
+<label>الاسم</label><input id="nm" maxlength="60" placeholder="مثال: فاطمة أحمد" autocomplete="name">
+<label>الإيميل <small>(يوصلج عليه رابط الدخول)</small></label><input id="em" class="ltr" type="email" maxlength="120" placeholder="name@email.com" autocomplete="email">
+<label>رقم الواتساب <small>(اختياري)</small></label><input id="wa" class="ltr" type="tel" maxlength="20" placeholder="05xxxxxxxx" autocomplete="tel">
+<button class="go" id="go">سجليني</button>
+<div class="err" id="err"></div>
+</div>
+<div class="card" id="ok"><div class="big">✅</div><h2>تم تسجيلج</h2><p>طرشنا لج رابط الدخول على إيميلج 💗<br>وتقدرين تدخلين الورشة من هني بعد:</p>
+<a class="join" href="https://events.teams.microsoft.com/event/6d81753d-275f-4ce6-8623-8a471bfc78e7@75a6d907-0177-4d5a-86c7-e55eec26bf5a" target="_blank" rel="noopener">ادخلي الورشة (Teams)</a></div>
+<div class="foot">أم جوري · omjori.online</div>
+</div>
+<script>
+function $(i){return document.getElementById(i)}
+function err(t){$('err').textContent=t;$('err').style.display='block'}
+$('go').onclick=function(){
+var n=$('nm').value.trim(),e=$('em').value.trim(),w=$('wa').value.trim();
+if(n.length<2){err('اكتبي اسمج');return}
+if(!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(e)){err('اكتبي إيميلج صح');return}
+$('err').style.display='none';var b=this;b.disabled=true;b.textContent='لحظة...';
+var x=new XMLHttpRequest();x.open('POST','https://haleemaomjori.app.n8n.cloud/webhook/ws-register');x.setRequestHeader('Content-Type','application/json');x.timeout=40000;
+x.onload=function(){if(x.status==200){$('form').style.display='none';$('ok').style.display='block';window.scrollTo(0,0)}else{b.disabled=false;b.textContent='سجليني';err('صار خطأ بسيط، جربي مرة ثانية')}};
+x.onerror=x.ontimeout=function(){b.disabled=false;b.textContent='سجليني';err('صار خطأ بسيط، جربي مرة ثانية')};
+x.send(JSON.stringify({name:n,email:e,whatsapp:w}))};
+</script></body></html>
