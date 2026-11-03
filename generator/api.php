@@ -5,7 +5,7 @@ header('Cache-Control: no-store');
 function out($a){ echo json_encode($a, JSON_UNESCAPED_UNICODE); exit; }
 if ($_SERVER['REQUEST_METHOD'] !== 'POST') out(['ok'=>false,'msg'=>'طلب غير صحيح']);
 $cfg = require __DIR__.'/config.php';
-$KEY = $cfg['key']; $DAY = (int)($cfg['daily_limit'] ?? 400); $IPH = (int)($cfg['ip_hour_limit'] ?? 40);
+$KEYS = array_values(array_filter(array_map('trim', (array)($cfg['keys'] ?? [$cfg['key'] ?? ''])))); $DAY = (int)($cfg['daily_limit'] ?? 400); $IPH = (int)($cfg['ip_hour_limit'] ?? 40);
 // ===== حدود الاستخدام =====
 $dir = __DIR__.'/data'; if (!is_dir($dir)) @mkdir($dir, 0700, true);
 $ip = substr(preg_replace('/[^0-9a-f:.]/i','',$_SERVER['REMOTE_ADDR'] ?? 'x'),0,45);
@@ -68,13 +68,20 @@ elseif ($mode==='chunk') { $props=['sections'=>$secSch]; $req=['sections']; if($
 else { $props=['title'=>$S,'subtitle'=>$S,'intro'=>$S,'sections'=>$secSch,'conclusion'=>$S,'tip'=>$S,'image_prompts'=>$imgSch]; $req=array_keys($props); if($tbl){$props['table']=$tblSch;$req[]='table';} }
 $body = ['contents'=>[['parts'=>[['text'=>$prompt."\nملاحظة: الجمهور في دولة الإمارات، استخدمي الدرهم الإماراتي عند ذكر المال وأمثلة تناسب الإمارات."]]]],
  'generationConfig'=>['responseMimeType'=>'application/json','temperature'=>0.7,'responseSchema'=>['type'=>'OBJECT','properties'=>$props,'required'=>$req]]];
-$model = $cfg['model'] ?? 'gemini-3.5-flash-lite';
-$url = $cfg['endpoint'] ?? ('https://generativelanguage.googleapis.com/v1beta/models/'.$model.':generateContent');
-$ch = curl_init($url);
-curl_setopt_array($ch,[CURLOPT_POST=>true,CURLOPT_RETURNTRANSFER=>true,CURLOPT_TIMEOUT=>95,CURLOPT_HTTPHEADER=>['Content-Type: application/json','x-goog-api-key: '.$KEY],CURLOPT_POSTFIELDS=>json_encode($body,JSON_UNESCAPED_UNICODE)]);
-$res = curl_exec($ch); $code = curl_getinfo($ch, CURLINFO_HTTP_CODE); curl_close($ch);
+$models = $cfg['models'] ?? ['gemini-3.5-flash-lite','gemini-2.5-flash-lite','gemini-2.5-flash'];
+$res = false; $code = 0;
+foreach ($KEYS as $KEY) {
+ foreach ($models as $model) {
+  $url = $cfg['endpoint'] ?? ('https://generativelanguage.googleapis.com/v1beta/models/'.$model.':generateContent');
+  $ch = curl_init($url);
+  curl_setopt_array($ch,[CURLOPT_POST=>true,CURLOPT_RETURNTRANSFER=>true,CURLOPT_TIMEOUT=>95,CURLOPT_HTTPHEADER=>['Content-Type: application/json','x-goog-api-key: '.$KEY],CURLOPT_POSTFIELDS=>json_encode($body,JSON_UNESCAPED_UNICODE)]);
+  $res = curl_exec($ch); $code = curl_getinfo($ch, CURLINFO_HTTP_CODE); curl_close($ch);
+  if ($res && $code < 400) break 2;
+ }
+}
+if (!$res || in_array($code,[0,429,500,502,503,504])) { @file_put_contents($dir.'/last_err.txt', $code.' '.mb_substr((string)$res,0,600)); out(['ok'=>false,'busy'=>true,'msg'=>'في زحمة على المولد، جربي بعد دقيقة']); }
 $fail = function($m=null){ out(['ok'=>false,'msg'=>$m ?: 'ما قدرت أجهز الملف، جربي صياغة ثانية للموضوع']); };
-if (!$res || $code >= 400) $fail('صار ضغط على المولد، جربي مرة ثانية بعد دقيقة');
+if (!$res || $code >= 400) { @file_put_contents($dir.'/last_err.txt', $code.' '.mb_substr((string)$res,0,600)); $fail('صار ضغط على المولد، جربي مرة ثانية بعد دقيقة'); }
 $j = json_decode($res,true); $t='';
 foreach (($j['candidates'][0]['content']['parts'] ?? []) as $p) $t .= $p['text'] ?? '';
 $d = null; if (preg_match('/\{[\s\S]*\}/u',$t,$m)) $d = json_decode($m[0],true); if (!$d) $d = json_decode($t,true);

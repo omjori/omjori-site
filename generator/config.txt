@@ -1,7 +1,7 @@
 <?php
-// الصقي مفتاح Gemini بين العلامتين بدال PASTE_KEY_HERE
+// المفاتيح في key.txt (كل مفتاح في سطر)
 return [
-  'key' => 'PASTE_KEY_HERE',
-  'daily_limit' => 400,
+  'keys' => array_map('trim', (array)@file(__DIR__.'/key.txt', FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES)),
+  'daily_limit' => 3000,
   'ip_hour_limit' => 40,
 ];
