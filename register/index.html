@@ -18,6 +18,7 @@ input:focus{border-color:#E63872;background:#fff}
 .ltr{direction:ltr;text-align:left}
 .go{width:100%;margin-top:20px;background:linear-gradient(135deg,#E63872,#E4537C);color:#fff;border:0;border-radius:18px;padding:16px;font-family:inherit;font-size:20px;font-weight:900;cursor:pointer;box-shadow:0 10px 24px rgba(230,56,114,.3)}
 .go:disabled{opacity:.6}
+.opts{display:flex;gap:8px;flex-wrap:wrap}.opt{flex:1;min-width:30%;font-family:inherit;font-size:15px;font-weight:700;padding:11px 6px;border-radius:14px;border:2px solid #F7CFDC;background:#fff;color:#7a5560;cursor:pointer;text-align:center}.opt.on{border-color:#E63872;background:#FFF0F5;color:#E63872}
 .err{display:none;color:#c0244f;margin-top:12px;font-size:15px;text-align:center;font-weight:700}
 #ok{display:none;text-align:center}
 #ok .big{font-size:46px}
@@ -28,9 +29,14 @@ input:focus{border-color:#E63872;background:#fff}
 </style></head><body><div class="wrap">
 <div class="top"><span class="pill">مجلس سيدات أعمال أبوظبي</span><h1>سجلي في ورشة<br>بيع الملفات الرقمية</h1><div class="when">⏰ الثلاثاء 3 نوفمبر · 4:30 – 6:30 العصر</div></div>
 <div class="card" id="form">
-<label>الاسم</label><input id="nm" maxlength="60" placeholder="مثال: فاطمة أحمد" autocomplete="name">
-<label>الإيميل <small>(يوصلج عليه رابط الدخول)</small></label><input id="em" class="ltr" type="email" maxlength="120" placeholder="name@email.com" autocomplete="email">
-<label>رقم الواتساب <small>(اختياري)</small></label><input id="wa" class="ltr" type="tel" maxlength="20" placeholder="05xxxxxxxx" autocomplete="tel">
+<label>الاسم الثلاثي <small>Full Name</small></label><input id="nm" maxlength="80" placeholder="مثال: فاطمة أحمد علي" autocomplete="name">
+<label>الجنسية <small>Nationality</small></label><input id="na" maxlength="40" placeholder="مثال: إماراتية">
+<label>البريد الإلكتروني <small>Email · يوصلج عليه رابط الدخول</small></label><input id="em" class="ltr" type="email" maxlength="120" placeholder="name@email.com" autocomplete="email">
+<label>رقم الهاتف <small>Phone Number</small></label><input id="wa" class="ltr" type="tel" maxlength="20" placeholder="05xxxxxxxx" autocomplete="tel">
+<label>هل تملكين مشروعاً تجارياً؟ <small>Do you own a business?</small></label><div class="opts" data-k="has_business"><button type="button" class="opt" data-v="نعم">نعم - Yes</button><button type="button" class="opt" data-v="لا">لا - No</button></div>
+<label>حساب الانستقرام الخاص بالمشروع <small>Instagram</small></label><input id="ig" class="ltr" maxlength="80" placeholder="@account">
+<label>نوع الرخصة التجارية <small>Trade license type</small></label><div class="opts" data-k="license_type"><button type="button" class="opt" data-v="مبدعة - Mubdia">مبدعة - Mubdia</button><button type="button" class="opt" data-v="Other">Other - أخرى</button><button type="button" class="opt" data-v="N/A">غير متاح - N/A</button></div>
+<label>رقم الرخصة التجارية <small>Trade License Number</small></label><input id="ln" class="ltr" maxlength="40" placeholder="-">
 <button class="go" id="go">سجليني</button>
 <div class="err" id="err"></div>
 </div>
@@ -41,13 +47,18 @@ input:focus{border-color:#E63872;background:#fff}
 <script>
 function $(i){return document.getElementById(i)}
 function err(t){$('err').textContent=t;$('err').style.display='block'}
+var SEL={};[].forEach.call(document.querySelectorAll('.opts'),function(g){[].forEach.call(g.querySelectorAll('.opt'),function(b){b.onclick=function(){[].forEach.call(g.querySelectorAll('.opt'),function(x){x.className='opt'});b.className='opt on';SEL[g.getAttribute('data-k')]=b.getAttribute('data-v')}})});
 $('go').onclick=function(){
-var n=$('nm').value.trim(),e=$('em').value.trim(),w=$('wa').value.trim();
-if(n.length<2){err('اكتبي اسمج');return}
+var n=$('nm').value.trim(),e=$('em').value.trim(),w=$('wa').value.trim(),na=$('na').value.trim();
+if(n.length<2){err('اكتبي اسمج الثلاثي');return}
+if(na.length<2){err('اكتبي جنسيتج');return}
 if(!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(e)){err('اكتبي إيميلج صح');return}
+if(w.replace(/\D/g,'').length<7){err('اكتبي رقم هاتفج');return}
+if(!SEL.has_business){err('اختاري: هل تملكين مشروعاً تجارياً؟');return}
+if(!SEL.license_type){err('اختاري نوع الرخصة التجارية');return}
 $('err').style.display='none';var b=this;b.disabled=true;b.textContent='لحظة...';
 var x=new XMLHttpRequest();x.open('POST','https://haleemaomjori.app.n8n.cloud/webhook/ws-register');x.setRequestHeader('Content-Type','application/json');x.timeout=40000;
 x.onload=function(){if(x.status==200){$('form').style.display='none';$('ok').style.display='block';window.scrollTo(0,0)}else{b.disabled=false;b.textContent='سجليني';err('صار خطأ بسيط، جربي مرة ثانية')}};
 x.onerror=x.ontimeout=function(){b.disabled=false;b.textContent='سجليني';err('صار خطأ بسيط، جربي مرة ثانية')};
-x.send(JSON.stringify({name:n,email:e,whatsapp:w}))};
+x.send(JSON.stringify({name:n,email:e,whatsapp:w,nationality:na,has_business:SEL.has_business,instagram:$('ig').value.trim(),license_type:SEL.license_type,license_no:$('ln').value.trim()}))};
 </script></body></html>
