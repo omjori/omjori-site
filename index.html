@@ -1,6 +1,5 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl" data-theme="light">
-<head>
+<html lang="ar" dir="rtl" data-theme="light"><head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>أكاديميه أم جوري | دورات رقمية احترافية</title>
@@ -10,8 +9,8 @@
 <meta property="og:description" content="تعلمي مهارات المستقبل وابدئي مشروعك من المنزل">
 <meta property="og:type" content="website">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800;900&family=Tajawal:wght@300;400;500;700;800&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800;900&amp;family=Tajawal:wght@300;400;500;700;800&amp;display=swap" rel="stylesheet">
 
 
 <style>
@@ -1201,20 +1200,26 @@ footer {
 [data-theme="dark"] .hero::before { background: radial-gradient(circle, rgba(233,30,140,0.18) 0%, transparent 70%); }
 [data-theme="dark"] .hero::after { background: radial-gradient(circle, rgba(233,30,140,0.12) 0%, transparent 70%); }
 </style>
-</head>
+<style id="omjori-fixes">
+/* إصلاح: إظهار المحتوى فوراً بدل الظهور التدريجي البطيء */
+.fade-in,.fade-in.visible{opacity:1!important;transform:none!important;transition:none!important}
+/* أيقونات SVG بدل الإيموجي */
+.ic{width:1em;height:1em;display:inline-block;vertical-align:-.15em;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;flex-shrink:0}
+.bf-icon .ic,.oico .ic,.badge .ic{color:var(--pink-main)}
+.why-icon .ic{color:#fff;width:1.15em;height:1.15em}
+.badge .ic{margin-inline-end:.35em}
+</style></head>
 <body>
 
 <!-- ══════ GENERATOR BAR ══════ -->
-<a href="https://academy.omjori.online/generator/" class="gen-bar" style="display:flex;align-items:center;justify-content:center;gap:10px;flex-wrap:wrap;padding:11px 16px;background:linear-gradient(90deg,#B43E50,#D6586A,#E07A8A);color:#fff;text-decoration:none;font-family:inherit;font-size:15px;font-weight:700;text-align:center;line-height:1.5">
-  <span>✨ جديد: مولّد الملفات الرقمية — ملفك الجاهز للبيع بدقيقة (PDF · Word · Excel)</span>
-  <span style="background:#fff;color:#B43E50;border-radius:30px;padding:4px 14px;font-size:14px;white-space:nowrap">جربيه مجاناً ←</span>
+<a href="https://academy.omjori.online/generator/" class="gen-bar" style="display:flex;align-items:center;justify-content:center;gap:10px;flex-wrap:wrap;padding:11px 16px;background:linear-gradient(90deg,#B43E50,#D6586A,#E07A8A);color:#fff;text-decoration:none;font-family:inherit;font-size:15px;font-weight:700;text-align:center;line-height:1.5"> <span> جديد: مولّد الملفات الرقمية — ملفك الجاهز للبيع بدقيقة (PDF · Word · Excel)</span> <span style="background:#fff;color:#B43E50;border-radius:30px;padding:4px 14px;font-size:14px;white-space:nowrap">جربيه مجاناً ←</span>
 </a>
 
 <!-- ══════ NAVBAR ══════ -->
 <nav class="topbar">
   <div class="nav-logo">
     <img src="https://res.cloudinary.com/m5tqmidb/image/upload/f_auto,q_auto,w_900/v1793531434/omjori-site/logo.jpg" alt="أم جوري" class="nav-logo-img">
-    <div class="nav-brand"  >أكاديميه  <span>أم جوري</span></div>
+    <div class="nav-brand">أكاديميه  <span>أم جوري</span></div>
   </div>
 
   <ul class="nav-links">
@@ -1224,10 +1229,7 @@ footer {
     <li><a href="#about">من أنا</a></li>
     <li><a href="#faq">الأسئلة الشائعة</a></li>
     <li>
-      <a href="mailto:omjori.online@gmail.com" class="nav-cta">
-        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 5L2 7"/></svg>
-        تواصلي
-      </a>
+      <a href="mailto:omjori.online@gmail.com" class="nav-cta"> <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"></rect><path d="m22 7-10 5L2 7"></path></svg> تواصلي </a>
     </li>
   </ul>
 
@@ -1246,9 +1248,7 @@ footer {
   <a href="#testimonials" onclick="toggleMenu()">آراء المتدربات</a>
   <a href="#about" onclick="toggleMenu()">من أنا</a>
   <a href="#faq" onclick="toggleMenu()">الأسئلة الشائعة</a>
-  <a href="mailto:omjori.online@gmail.com" style="color:var(--pink-main);font-weight:800;">
-    تواصلي عبر الإيميل ✉️
-  </a>
+  <a href="mailto:omjori.online@gmail.com" style="color:var(--pink-main);font-weight:800;"> تواصلي عبر الإيميل  </a>
 </div>
 
 <!-- ══════ HERO ══════ -->
@@ -1256,10 +1256,7 @@ footer {
   <div class="hero-inner">
 
     <div class="hero-text fade-in">
-      <div class="section-eyebrow">
-        🌟 منصة التعلم الرقمي للمرأة العربية
-        
-      </div>
+      <div class="section-eyebrow">  منصة التعلم الرقمي للمرأة العربية </div>
 
       <h1>
         تعلمي مهارات المستقبل…<br>و<span class="highlight">ابدئي مشروعك من المنزل</span>
@@ -1271,20 +1268,15 @@ footer {
       </p>
 
       <div class="hero-badges">
-        <div class="badge">✅ أكثر من 200 متدربة</div>
-        <div class="badge">🎓 دورات مسجلة مدى الحياة</div>
-        <div class="badge">📜 شهادة حضور</div>
-        <div class="badge">✉️ دعم عبر الإيميل</div>
+        <div class="badge"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><path d="m9 12 2 2 4-4"></path></svg> أكثر من 200 متدربة</div>
+        <div class="badge"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M22 10 12 5 2 10l10 5 10-5Z"></path><path d="M6 12v5c3 3 9 3 12 0v-5"></path></svg> دورات مسجلة مدى الحياة</div>
+        <div class="badge"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="6"></circle><path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"></path></svg> شهادة حضور</div>
+        <div class="badge"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><rect width="20" height="16" x="2" y="4" rx="2"></rect><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg> دعم عبر الإيميل</div>
       </div>
 
       <div class="hero-btns">
-        <a href="#courses" class="btn-primary">
-          🚀 ابدئي الآن
-        </a>
-        <a href="#courses" class="btn-secondary">
-          استعرضي الدورات →
-          
-        </a>
+        <a href="#courses" class="btn-primary">  ابدئي الآن </a>
+        <a href="#courses" class="btn-secondary"> استعرضي الدورات → </a>
       </div>
     </div>
 
@@ -1298,7 +1290,7 @@ footer {
       <div class="orbit-track">
         <div class="orbit-stat" style="position:absolute;top:-50px;left:50%;transform:translateX(-50%);">
           <div class="orbit-pill">
-            <span class="oico">👩‍💻</span>
+            <span class="oico"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="12" rx="2"></rect><path d="M2 20h20"></path></svg></span>
             <div>
               <div class="onum">+<span data-count="200">0</span></div>
               <div class="olbl">متدربة</div>
@@ -1308,7 +1300,7 @@ footer {
 
         <div class="orbit-stat" style="position:absolute;bottom:22px;right:-30px;">
           <div class="orbit-pill">
-            <span class="oico">📚</span>
+            <span class="oico"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="m16 6 4 14"></path><path d="M12 6v14"></path><path d="M8 8v12"></path><path d="M4 4v16"></path></svg></span>
             <div>
               <div class="onum"><span data-count="5">0</span></div>
               <div class="olbl">دورات</div>
@@ -1318,7 +1310,7 @@ footer {
 
         <div class="orbit-stat" style="position:absolute;bottom:22px;left:-30px;">
           <div class="orbit-pill">
-            <span class="oico">⭐</span>
+            <span class="oico"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg></span>
             <div>
               <div class="onum">+<span data-count="3">0</span></div>
               <div class="olbl">سنوات</div>
@@ -1335,10 +1327,8 @@ footer {
 <section class="section why-section" id="why">
   <div class="section-inner">
     <div class="section-header fade-in">
-      <span class="section-eyebrow">💡 ميزاتنا</span>
-      <h2 class="section-title">
-        لماذا تختارين دورات <span class="accent">أم جوري</span>؟
-      </h2>
+      <span class="section-eyebrow"> ميزاتنا</span>
+      <h2 class="section-title"> لماذا تختارين دورات <span class="accent">أم جوري</span>؟ </h2>
       <p class="section-subtitle">
         لأن التعلم لا يحتاج إلى خبرة سابقة، بل إلى شرح واضح، وتطبيق عملي، ودعم مستمر.
         
@@ -1346,32 +1336,32 @@ footer {
     </div>
     <div class="why-grid">
       <div class="why-card fade-in">
-        <div class="why-icon">📖</div>
+        <div class="why-icon"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path></svg></div>
         <h3>شرح مبسط للجميع</h3>
         <p>نبدأ من الصفر مع شرح واضح يناسب جميع المستويات</p>
       </div>
       <div class="why-card fade-in">
-        <div class="why-icon">🛠️</div>
+        <div class="why-icon"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path></svg></div>
         <h3>تطبيق عملي</h3>
         <p>كل درس يُطبَّق مباشرةً لضمان فهم حقيقي ومهارة فعلية</p>
       </div>
       <div class="why-card fade-in">
-        <div class="why-icon">⏰</div>
+        <div class="why-icon"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><path d="M12 6v6l4 2"></path></svg></div>
         <h3>تعلمي في أي وقت</h3>
         <p>جميع الدروس مسجلة ومتاحة مدى الحياة على راحتك</p>
       </div>
       <div class="why-card fade-in">
-        <div class="why-icon">🔄</div>
+        <div class="why-icon"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8"></path><path d="M21 3v5h-5"></path><path d="M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16"></path><path d="M8 16H3v5"></path></svg></div>
         <h3>تحديثات مجانية</h3>
         <p>كل جديد يُضاف تلقائياً لدوراتك بدون رسوم إضافية</p>
       </div>
       <div class="why-card fade-in">
-        <div class="why-icon">💬</div>
+        <div class="why-icon"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg></div>
         <h3>دعم عبر الإيميل لشهرين</h3>
         <p>فريقنا موجود دائماً للإجابة على أسئلتك عبر الإيميل</p>
       </div>
       <div class="why-card fade-in">
-        <div class="why-icon">🏆</div>
+        <div class="why-icon"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"></path><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"></path><path d="M4 22h16"></path><path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"></path><path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"></path><path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"></path></svg></div>
         <h3>شهادة حضور معتمدة</h3>
         <p>احصلي على شهادتك بعد إتمام الدورة لتُضيفيها لسيرتك</p>
       </div>
@@ -1383,7 +1373,7 @@ footer {
 <section class="section courses-section" id="courses">
   <div class="section-inner">
     <div class="section-header fade-in">
-      <span class="section-eyebrow">🎓 دوراتنا</span>
+      <span class="section-eyebrow"> دوراتنا</span>
       <h2 class="section-title">الدورات <span class="accent">المتاحة</span></h2>
       <p class="section-subtitle">اختاري الدورة التي تناسبك وابدئي رحلتك نحو مستقبل رقمي مشرق</p>
     </div>
@@ -1391,7 +1381,7 @@ footer {
     <div class="courses-grid">
 
       <!-- CANVA -->
-      <article class="course-card fade-in" itemscope itemtype="https://schema.org/Course">
+      <article class="course-card fade-in" itemscope="" itemtype="https://schema.org/Course">
         <div class="course-thumb" style="background:linear-gradient(135deg,var(--pink-light),var(--bg-alt));">
           <div class="course-thumb-ring">
             <img src="https://res.cloudinary.com/m5tqmidb/image/upload/f_auto,q_auto,w_900/v1793531435/omjori-site/canva.jpg" alt="دورة Canva الاحترافية">
@@ -1399,91 +1389,81 @@ footer {
           <div class="course-thumb-badge">الأكثر طلباً</div>
         </div>
         <div class="course-body">
-          <h3 class="course-title" itemprop="name">🎨 دورة Canva الاحترافية</h3>
+          <h3 class="course-title" itemprop="name"> دورة Canva الاحترافية</h3>
           <p class="course-desc" itemprop="description">تعلمي تصميم المنشورات، الهوية البصرية، الستوري، الريلز، والقوالب الجاهزة باحتراف.</p>
-          <button class="accordion-btn" onclick="openCourseModal('canva')">
-            📋 استعرضي محاور الدورة التفصيلية (48 محور)
-          </button>
+          <button class="accordion-btn" onclick="openCourseModal('canva')">  استعرضي محاور الدورة التفصيلية (48 محور) </button>
           <div class="course-footer">
             <div class="course-price">500 <small>درهم إماراتي</small></div>
-            <a href="https://haleemaomjori.app.n8n.cloud/webhook/pay?p=canva" target="_blank" rel="noopener" class="course-enroll">💳 اشتري الآن</a>
+            <a href="https://haleemaomjori.app.n8n.cloud/webhook/pay?p=canva" target="_blank" rel="noopener" class="course-enroll"> اشتري الآن</a>
           </div>
         </div>
       </article>
-      <article class="course-card fade-in" itemscope itemtype="https://schema.org/Course">
+      <article class="course-card fade-in" itemscope="" itemtype="https://schema.org/Course">
         <div class="course-thumb" style="background:linear-gradient(135deg,var(--pink-light),var(--bg-alt));">
           <div class="course-thumb-ring">
             <img src="https://res.cloudinary.com/m5tqmidb/image/upload/f_auto,q_auto,w_900/v1793531435/omjori-site/chatgpt.jpg" alt="دورة الذكاء الاصطناعي و ChatGPT">
           </div>
         </div>
         <div class="course-body">
-          <h3 class="course-title" itemprop="name">🤖 دورة الذكاء الاصطناعي و ChatGPT</h3>
+          <h3 class="course-title" itemprop="name"> دورة الذكاء الاصطناعي و ChatGPT</h3>
           <p class="course-desc">تعلمي استخدام الذكاء الاصطناعي في كتابة المحتوى، التسويق، والأعمال اليومية باحتراف.</p>
-          <button class="accordion-btn" onclick="openCourseModal('chatgpt')">
-            📋 استعرضي محاور الدورة التفصيلية (27 درس)
-          </button>
+          <button class="accordion-btn" onclick="openCourseModal('chatgpt')">  استعرضي محاور الدورة التفصيلية (27 درس) </button>
           <div class="course-footer">
             <div class="course-price">250 <small>درهم إماراتي</small></div>
-            <a href="https://haleemaomjori.app.n8n.cloud/webhook/pay?p=chatgpt" target="_blank" rel="noopener" class="course-enroll">💳 اشتري الآن</a>
+            <a href="https://haleemaomjori.app.n8n.cloud/webhook/pay?p=chatgpt" target="_blank" rel="noopener" class="course-enroll"> اشتري الآن</a>
           </div>
         </div>
       </article>
 
-      <article class="course-card fade-in" itemscope itemtype="https://schema.org/Course">
+      <article class="course-card fade-in" itemscope="" itemtype="https://schema.org/Course">
         <div class="course-thumb" style="background:linear-gradient(135deg,var(--pink-light),var(--bg-alt));">
           <div class="course-thumb-ring">
             <img src="https://res.cloudinary.com/m5tqmidb/image/upload/f_auto,q_auto,w_900/v1793531436/omjori-site/pdf.jpg" alt="دورة بيع الملفات الرقمية">
           </div>
         </div>
         <div class="course-body">
-          <h3 class="course-title" itemprop="name">💰 دورة بيع الملفات الرقمية</h3>
+          <h3 class="course-title" itemprop="name"> دورة بيع الملفات الرقمية</h3>
           <p class="course-desc">تعلمي إنشاء وبيع المنتجات الرقمية عبر موقعك الخاص وتحويل مهاراتك لمصدر دخل مستدام.</p>
-          <button class="accordion-btn" onclick="openCourseModal('pdf')">
-            📋 استعرضي محاور الدورة التفصيلية (18 درس)
-          </button>
+          <button class="accordion-btn" onclick="openCourseModal('pdf')">  استعرضي محاور الدورة التفصيلية (18 درس) </button>
           <div class="course-footer">
             <div class="course-price">399 <small>درهم إماراتي</small></div>
-            <a href="https://haleemaomjori.app.n8n.cloud/webhook/pay?p=digital" target="_blank" rel="noopener" class="course-enroll">💳 اشتري الآن</a>
+            <a href="https://haleemaomjori.app.n8n.cloud/webhook/pay?p=digital" target="_blank" rel="noopener" class="course-enroll"> اشتري الآن</a>
           </div>
         </div>
       </article>
 
       <!-- ADS -->
-      <article class="course-card fade-in" itemscope itemtype="https://schema.org/Course">
+      <article class="course-card fade-in" itemscope="" itemtype="https://schema.org/Course">
         <div class="course-thumb" style="background:linear-gradient(135deg,var(--pink-light),var(--bg-alt));">
           <div class="course-thumb-ring">
             <img src="https://res.cloudinary.com/m5tqmidb/image/upload/f_auto,q_auto,w_900/v1793531437/omjori-site/ads.jpg" alt="دورة الإعلانات الممولة">
           </div>
         </div>
         <div class="course-body">
-          <h3 class="course-title" itemprop="name">📢 دورة كيف تنشئين إعلاناً ممولاً لمتجرك</h3>
+          <h3 class="course-title" itemprop="name"> دورة كيف تنشئين إعلاناً ممولاً لمتجرك</h3>
           <p class="course-desc">تعلمي إطلاق حملات إعلانية ناجحة تجذب العملاء وتحقق مبيعات حقيقية بأقل ميزانية.</p>
-          <button class="accordion-btn" onclick="openCourseModal('ads')">
-            📋 استعرضي محاور الدورة التفصيلية (7 دروس)
-          </button>
+          <button class="accordion-btn" onclick="openCourseModal('ads')">  استعرضي محاور الدورة التفصيلية (7 دروس) </button>
           <div class="course-footer">
             <div class="course-price">150 <small>درهم إماراتي</small></div>
-            <a href="https://haleemaomjori.app.n8n.cloud/webhook/pay?p=ads" target="_blank" rel="noopener" class="course-enroll">💳 اشتري الآن</a>
+            <a href="https://haleemaomjori.app.n8n.cloud/webhook/pay?p=ads" target="_blank" rel="noopener" class="course-enroll"> اشتري الآن</a>
           </div>
         </div>
       </article>
 
       <!-- IMAGE TO VIDEO -->
-      <article class="course-card fade-in" itemscope itemtype="https://schema.org/Course">
+      <article class="course-card fade-in" itemscope="" itemtype="https://schema.org/Course">
         <div class="course-thumb" style="background:linear-gradient(135deg,var(--pink-light),var(--bg-alt));">
           <div class="course-thumb-ring">
             <img src="https://res.cloudinary.com/m5tqmidb/image/upload/f_auto,q_auto,w_900/v1793531438/omjori-site/video.jpg" alt="دورة تحويل الصور إلى فيديو">
           </div>
         </div>
         <div class="course-body">
-          <h3 class="course-title" itemprop="name">🎬 دورة تحريك الصورة إلى فيديو</h3>
+          <h3 class="course-title" itemprop="name"> دورة تحريك الصورة إلى فيديو</h3>
           <p class="course-desc">تعلمي تحويل الصور الثابتة إلى فيديوهات ساحرة باستخدام أحدث أدوات الذكاء الاصطناعي.</p>
-          <button class="accordion-btn" onclick="openCourseModal('video')">
-            📋 استعرضي محاور الدورة التفصيلية (11 درس)
-          </button>
+          <button class="accordion-btn" onclick="openCourseModal('video')">  استعرضي محاور الدورة التفصيلية (11 درس) </button>
           <div class="course-footer">
             <div class="course-price">220 <small>درهم إماراتي</small></div>
-            <a href="https://haleemaomjori.app.n8n.cloud/webhook/pay?p=video" target="_blank" rel="noopener" class="course-enroll">💳 اشتري الآن</a>
+            <a href="https://haleemaomjori.app.n8n.cloud/webhook/pay?p=video" target="_blank" rel="noopener" class="course-enroll"> اشتري الآن</a>
           </div>
         </div>
       </article>
@@ -1496,16 +1476,16 @@ footer {
 <section class="section bundle-section" id="bundle">
   <div class="section-inner">
     <div class="section-header fade-in">
-      <span class="section-eyebrow">🔥 عروض خاصة</span>
+      <span class="section-eyebrow"> عروض خاصة</span>
       <h2 class="section-title">عرض <span class="accent">الباقة الكاملة</span></h2>
       <p class="section-subtitle">استثمري في تطوير مهاراتك مع جميع الدورات الخمس ضمن باقة واحدة بسعر استثنائي</p>
     </div>
 
     <div class="bundle-card fade-in">
-      <div class="bundle-badge-ribbon">⭐ الأوفر قيمةً</div>
+      <div class="bundle-badge-ribbon"> الأوفر قيمةً</div>
 
       <div class="bundle-header">
-        <h2>🔥 عرض الباقة الكاملة</h2>
+        <h2> عرض الباقة الكاملة</h2>
         <p>جميع الدورات الخمس • خطة تدريبية متكاملة • توفير استثنائي</p>
       </div>
 
@@ -1519,37 +1499,32 @@ footer {
           <div class="bundle-arrow">→</div>
           <div class="bundle-new-price">
             <div class="label">السعر بعد الخصم</div>
-            <div class="amount">💎 699 <small>درهم</small></div>
+            <div class="amount"> 699 <small>درهم</small></div>
           </div>
         </div>
 
         <!-- Savings banner -->
         <div class="bundle-savings">
-          <span>✨</span>
+          <span><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l1.9 5.1L19 10l-5.1 1.9L12 17l-1.9-5.1L5 10l5.1-1.9z"></path></svg></span>
           وفّري أكثر من 800 درهم عند الاشتراك في الباقة الكاملة!
         </div>
 
         <!-- What's included -->
         <ul class="bundle-features">
-          <li><span class="bf-icon">🎨</span> دورة Canva الاحترافية (500 درهم)</li>
-          <li><span class="bf-icon">🤖</span> دورة ChatGPT والذكاء الاصطناعي (250 درهم)</li>
-          <li><span class="bf-icon">💰</span> دورة بيع الملفات الرقمية (399 درهم)</li>
-          <li><span class="bf-icon">📢</span> دورة الإعلانات الممولة (150 درهم)</li>
-          <li><span class="bf-icon">🎬</span> دورة تحريك الصورة إلى فيديو (220 درهم)</li>
-          <li><span class="bf-icon">🎁</span> إمكانية البدء حسب الخطة التدريبية</li>
-          <li><span class="bf-icon">✉️</span> دعم عبر الإيميل لشهرين لكل الدورات</li>
-          <li><span class="bf-icon">♾️</span> وصول مدى الحياة لجميع المحتوى</li>
+          <li><span class="bf-icon"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><circle cx="13.5" cy="6.5" r=".5"></circle><circle cx="17.5" cy="10.5" r=".5"></circle><circle cx="8.5" cy="7.5" r=".5"></circle><circle cx="6.5" cy="12.5" r=".5"></circle><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.93 0 1.65-.75 1.65-1.69 0-.44-.18-.84-.44-1.13-.29-.29-.44-.65-.44-1.13a1.64 1.64 0 0 1 1.67-1.67h2c3.05 0 5.55-2.5 5.55-5.55C21.97 6.01 17.46 2 12 2z"></path></svg></span> دورة Canva الاحترافية (500 درهم)</li>
+          <li><span class="bf-icon"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 8V4H8"></path><rect width="16" height="12" x="4" y="8" rx="2"></rect><path d="M2 14h2"></path><path d="M20 14h2"></path><path d="M15 13v2"></path><path d="M9 13v2"></path></svg></span> دورة ChatGPT والذكاء الاصطناعي (250 درهم)</li>
+          <li><span class="bf-icon"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><circle cx="8" cy="8" r="6"></circle><path d="M18.09 10.37A6 6 0 1 1 10.34 18"></path><path d="M7 6h1v4"></path></svg></span> دورة بيع الملفات الرقمية (399 درهم)</li>
+          <li><span class="bf-icon"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="m3 11 18-5v12L3 14v-3z"></path><path d="M11.6 16.8a3 3 0 1 1-5.8-1.6"></path></svg></span> دورة الإعلانات الممولة (150 درهم)</li>
+          <li><span class="bf-icon"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="m22 8-6 4 6 4V8Z"></path><rect width="14" height="12" x="2" y="6" rx="2"></rect></svg></span> دورة تحريك الصورة إلى فيديو (220 درهم)</li>
+          <li><span class="bf-icon"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="8" width="18" height="4" rx="1"></rect><path d="M12 8v13"></path><path d="M19 12v7a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-7"></path><path d="M7.5 8a2.5 2.5 0 0 1 0-5C9 3 12 8 12 8s3-5 4.5-5a2.5 2.5 0 0 1 0 5"></path></svg></span> إمكانية البدء حسب الخطة التدريبية</li>
+          <li><span class="bf-icon"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><rect width="20" height="16" x="2" y="4" rx="2"></rect><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg></span> دعم عبر الإيميل لشهرين لكل الدورات</li>
+          <li><span class="bf-icon"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 12c-2-2.67-4-4-6-4a4 4 0 1 0 0 8c2 0 4-1.33 6-4Zm0 0c2 2.67 4 4 6 4a4 4 0 0 0 0-8c-2 0-4 1.33-6 4Z"></path></svg></span> وصول مدى الحياة لجميع المحتوى</li>
         </ul>
 
         <!-- CTA -->
-        <a href="https://pay.ziina.com/Omjori.Academy/700UXBkxn" target="_blank" rel="noopener"
-          class="bundle-cta-btn" id="bundle-cta-btn">
-          💳 اشتركي في الباقة الكاملة الآن
-        </a>
+        <a href="https://pay.ziina.com/Omjori.Academy/700UXBkxn" target="_blank" rel="noopener" class="bundle-cta-btn" id="bundle-cta-btn">  اشتركي في الباقة الكاملة الآن </a>
 
-        <p class="bundle-disclaimer">
-          🔒 دفع آمن عبر زينة • للاستفسار راسلينا على <a href="mailto:omjori.online@gmail.com" style="color:var(--pink-main);font-weight:700;">omjori.online@gmail.com</a>
-        </p>
+        <p class="bundle-disclaimer">  دفع آمن عبر زينة • للاستفسار راسلينا على <a href="mailto:omjori.online@gmail.com" style="color:var(--pink-main);font-weight:700;">omjori.online@gmail.com</a> </p>
       </div>
     </div>
   </div>
@@ -1559,18 +1534,18 @@ footer {
 <section class="section get-section">
   <div class="section-inner">
     <div class="section-header fade-in">
-      <span class="section-eyebrow">🎁 مميزات الاشتراك</span>
+      <span class="section-eyebrow"> مميزات الاشتراك</span>
       <h2 class="section-title">ماذا ستحصلين <span class="accent">داخل كل دورة؟</span></h2>
     </div>
     <div class="get-grid">
-      <div class="get-item fade-in"><div class="get-check">🎬</div><div class="get-item-text"><h4>فيديوهات بجودة عالية</h4><p>محتوى مرئي واضح ومنظم باحتراف</p></div></div>
-      <div class="get-item fade-in"><div class="get-check">📋</div><div class="get-item-text"><h4>شرح خطوة بخطوة</h4><p>ما فيش خطوة تفوتك — نتبع معك كل تفصيلة</p></div></div>
-      <div class="get-item fade-in"><div class="get-check">📁</div><div class="get-item-text"><h4>ملفات جاهزة للتطبيق</h4><p>موارد ومواد جاهزة تستخدمينها فوراً</p></div></div>
-      <div class="get-item fade-in"><div class="get-check">🎨</div><div class="get-item-text"><h4>قوالب مجانية</h4><p>قوالب جاهزة توفر عليك الوقت والجهد</p></div></div>
-      <div class="get-item fade-in"><div class="get-check">📜</div><div class="get-item-text"><h4>شهادة حضور معتمدة</h4><p>أضيفيها لسيرتك الذاتية بثقة</p></div></div>
-      <div class="get-item fade-in"><div class="get-check">🔄</div><div class="get-item-text"><h4>تحديثات مستقبلية مجانية</h4><p>كل جديد يُضاف تلقائياً لحسابك</p></div></div>
-      <div class="get-item fade-in"><div class="get-check">✉️</div><div class="get-item-text"><h4>دعم عبر الإيميل لشهرين</h4><p>فريقنا موجود دائماً للإجابة على أسئلتك</p></div></div>
-      <div class="get-item fade-in"><div class="get-check">♾️</div><div class="get-item-text"><h4>وصول مدى الحياة</h4><p>مشاهدة الدروس في أي وقت وكم مرة تريدين</p></div></div>
+      <div class="get-item fade-in"><div class="get-check"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="m22 8-6 4 6 4V8Z"></path><rect width="14" height="12" x="2" y="6" rx="2"></rect></svg></div><div class="get-item-text"><h4>فيديوهات بجودة عالية</h4><p>محتوى مرئي واضح ومنظم باحتراف</p></div></div>
+      <div class="get-item fade-in"><div class="get-check"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><rect width="8" height="4" x="8" y="2" rx="1"></rect><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path><path d="M12 11h4"></path><path d="M12 16h4"></path><path d="M8 11h.01"></path><path d="M8 16h.01"></path></svg></div><div class="get-item-text"><h4>شرح خطوة بخطوة</h4><p>ما فيش خطوة تفوتك — نتبع معك كل تفصيلة</p></div></div>
+      <div class="get-item fade-in"><div class="get-check"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20h16a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-7.93a2 2 0 0 1-1.66-.9l-.82-1.2A2 2 0 0 0 7.93 3H4a2 2 0 0 0-2 2v13c0 1.1.9 2 2 2Z"></path></svg></div><div class="get-item-text"><h4>ملفات جاهزة للتطبيق</h4><p>موارد ومواد جاهزة تستخدمينها فوراً</p></div></div>
+      <div class="get-item fade-in"><div class="get-check"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><circle cx="13.5" cy="6.5" r=".5"></circle><circle cx="17.5" cy="10.5" r=".5"></circle><circle cx="8.5" cy="7.5" r=".5"></circle><circle cx="6.5" cy="12.5" r=".5"></circle><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.93 0 1.65-.75 1.65-1.69 0-.44-.18-.84-.44-1.13-.29-.29-.44-.65-.44-1.13a1.64 1.64 0 0 1 1.67-1.67h2c3.05 0 5.55-2.5 5.55-5.55C21.97 6.01 17.46 2 12 2z"></path></svg></div><div class="get-item-text"><h4>قوالب مجانية</h4><p>قوالب جاهزة توفر عليك الوقت والجهد</p></div></div>
+      <div class="get-item fade-in"><div class="get-check"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="6"></circle><path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"></path></svg></div><div class="get-item-text"><h4>شهادة حضور معتمدة</h4><p>أضيفيها لسيرتك الذاتية بثقة</p></div></div>
+      <div class="get-item fade-in"><div class="get-check"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8"></path><path d="M21 3v5h-5"></path><path d="M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16"></path><path d="M8 16H3v5"></path></svg></div><div class="get-item-text"><h4>تحديثات مستقبلية مجانية</h4><p>كل جديد يُضاف تلقائياً لحسابك</p></div></div>
+      <div class="get-item fade-in"><div class="get-check"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><rect width="20" height="16" x="2" y="4" rx="2"></rect><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg></div><div class="get-item-text"><h4>دعم عبر الإيميل لشهرين</h4><p>فريقنا موجود دائماً للإجابة على أسئلتك</p></div></div>
+      <div class="get-item fade-in"><div class="get-check"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 12c-2-2.67-4-4-6-4a4 4 0 1 0 0 8c2 0 4-1.33 6-4Zm0 0c2 2.67 4 4 6 4a4 4 0 0 0 0-8c-2 0-4 1.33-6 4Z"></path></svg></div><div class="get-item-text"><h4>وصول مدى الحياة</h4><p>مشاهدة الدروس في أي وقت وكم مرة تريدين</p></div></div>
     </div>
   </div>
 </section>
@@ -1579,7 +1554,7 @@ footer {
 <section class="section testimonials-section" id="testimonials">
   <div class="section-inner">
     <div class="section-header fade-in">
-      <span class="section-eyebrow">❤️ قالت عننا</span>
+      <span class="section-eyebrow"> قالت عننا</span>
       <h2 class="section-title">نفتخر بثقة أكثر من <span class="accent">200 متدربة</span> من مختلف الدول</h2>
     </div>
     <div class="testimonials-grid">
@@ -1717,7 +1692,7 @@ footer {
         <div class="about-badge ab-2"><div class="num">منذ 2021</div><div class="lbl">في التدريب الرقمي</div></div>
       </div>
       <div class="about-content fade-in">
-        <span class="section-eyebrow">👩‍💻 من أنا</span>
+        <span class="section-eyebrow"> من أنا</span>
         <h2>من هي <span class="pink">أم جوري</span>؟</h2>
         <p>منذ عام 2021 أساعد النساء على تعلم المهارات الرقمية بطريقة عملية وبسيطة، حتى يتمكنّ من تطوير أنفسهن وبناء مصدر دخل من الإنترنت.</p>
         <p>أنا مدربة متخصصة في التصميم، الذكاء الاصطناعي، والتسويق الرقمي. أساعدك على اكتساب مهارات عملية وتطبيقها في مشاريعك الخاصة.</p>
@@ -1728,10 +1703,7 @@ footer {
           <div class="about-stat"><div class="n">+3</div><div class="l">سنوات خبرة</div></div>
         </div>
         <div style="margin-top:26px;">
-          <a href="mailto:omjori.online@gmail.com" class="btn-primary" style="display:inline-flex;">
-            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 5L2 7"/></svg>
-            تواصلي معي مباشرةً
-          </a>
+          <a href="mailto:omjori.online@gmail.com" class="btn-primary" style="display:inline-flex;"> <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"></rect><path d="m22 7-10 5L2 7"></path></svg> تواصلي معي مباشرةً </a>
         </div>
       </div>
     </div>
@@ -1742,7 +1714,7 @@ footer {
 <section class="section faq-section" id="faq">
   <div class="section-inner">
     <div class="section-header fade-in">
-      <span class="section-eyebrow">❓ أسئلة شائعة</span>
+      <span class="section-eyebrow"> أسئلة شائعة</span>
       <h2 class="section-title">إجابات على <span class="accent">أكثر الأسئلة شيوعاً</span></h2>
     </div>
     <div class="faq-list">
@@ -1793,35 +1765,27 @@ footer {
 
 <!-- ══════ FINAL CTA ══════ -->
 <section class="final-cta">
-  <h2>ابدئي رحلتك اليوم 🩷</h2>
+  <h2>ابدئي رحلتك اليوم </h2>
   <p>كل خطوة صغيرة تتعلمينها اليوم قد تكون بداية نجاح كبير غداً.</p>
-  <a href="#courses" class="btn-white">
-    🚀 استعرضي الدورات وابدئي الآن
-  </a>
+  <a href="#courses" class="btn-white">  استعرضي الدورات وابدئي الآن </a>
   <div class="final-guarantees">
-    <div class="guarantee-item"><div class="gicon">📦</div>وصول بعد الدفع</div>
-    <div class="guarantee-item"><div class="gicon">🔒</div>دفع آمن</div>
-    <div class="guarantee-item"><div class="gicon">♾️</div>مدى الحياة</div>
-    <div class="guarantee-item"><div class="gicon">✉️</div>دعم لشهرين</div>
+    <div class="guarantee-item"><div class="gicon"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z"></path><path d="m3.3 7 8.7 5 8.7-5"></path><path d="M12 22V12"></path></svg></div>وصول بعد الدفع</div>
+    <div class="guarantee-item"><div class="gicon"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><rect width="18" height="11" x="3" y="11" rx="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg></div>دفع آمن</div>
+    <div class="guarantee-item"><div class="gicon"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 12c-2-2.67-4-4-6-4a4 4 0 1 0 0 8c2 0 4-1.33 6-4Zm0 0c2 2.67 4 4 6 4a4 4 0 0 0 0-8c-2 0-4 1.33-6 4Z"></path></svg></div>مدى الحياة</div>
+    <div class="guarantee-item"><div class="gicon"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><rect width="20" height="16" x="2" y="4" rx="2"></rect><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg></div>دعم لشهرين</div>
   </div>
 </section>
 
 <!-- ══════ FOOTER ══════ -->
 <footer>
   <div class="footer-inner">
-    <div class="footer-logo">أكاديميه  <span>أم جوري</span> 🩷</div>
+    <div class="footer-logo">أكاديميه <span>أم جوري</span> </div>
     <p class="footer-desc">منصة تعليمية رقمية متخصصة في تدريب المرأة العربية على مهارات المستقبل بطريقة عملية ومبسطة.</p>
-    <p class="footer-desc">📧 للتواصل والاستفسار: <a href="mailto:omjori.online@gmail.com" style="color:#fff;font-weight:700;">omjori.online@gmail.com</a></p>
+    <p class="footer-desc"> للتواصل والاستفسار: <a href="mailto:omjori.online@gmail.com" style="color:#fff;font-weight:700;">omjori.online@gmail.com</a></p>
     <div class="footer-social">
-      <a href="mailto:omjori.online@gmail.com" class="social-link" aria-label="البريد الإلكتروني">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 5L2 7"/></svg>
-      </a>
-      <a href="https://2u.pw/19cJyR" target="_blank" class="social-link" rel="noopener" aria-label="Instagram">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="white"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
-      </a>
-      <a href="https://2u.pw/ItxS4G" target="_blank" class="social-link" rel="noopener" aria-label="Facebook">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="white"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
-      </a>
+      <a href="mailto:omjori.online@gmail.com" class="social-link" aria-label="البريد الإلكتروني"> <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"></rect><path d="m22 7-10 5L2 7"></path></svg> </a>
+      <a href="https://2u.pw/19cJyR" target="_blank" class="social-link" rel="noopener" aria-label="Instagram"> <svg width="18" height="18" viewBox="0 0 24 24" fill="white"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"></path></svg> </a>
+      <a href="https://2u.pw/ItxS4G" target="_blank" class="social-link" rel="noopener" aria-label="Facebook"> <svg width="18" height="18" viewBox="0 0 24 24" fill="white"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"></path></svg> </a>
     </div>
     <hr class="footer-divider">
     <p class="footer-bottom">© 2026 أكاديميه  أم جوري | omjori.online | جميع الحقوق محفوظة</p>
@@ -2027,13 +1991,11 @@ document.addEventListener('keydown', e => {
       <!-- Dynamic Content -->
     </div>
     <div class="course-modal-footer">
-      <div style="font-size:0.88rem;font-weight:700;color:var(--text-muted);" id="modal-footer-info">جاهزة للبدء والتميز؟ 🚀</div>
-      <a href="mailto:omjori.online@gmail.com" class="nav-cta" style="padding:10px 22px;font-size:0.9rem!important;">
-        ✉️ تواصلي عبر الإيميل للاستفسار
-      </a>
+      <div style="font-size:0.88rem;font-weight:700;color:var(--text-muted);" id="modal-footer-info">جاهزة للبدء والتميز؟ </div>
+      <a href="mailto:omjori.online@gmail.com" class="nav-cta" style="padding:10px 22px;font-size:0.9rem!important;">  تواصلي عبر الإيميل للاستفسار </a>
     </div>
   </div>
 </div>
 
-</body>
-</html>
+
+</body></html>
