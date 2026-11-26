@@ -1212,7 +1212,26 @@ footer {
 <body>
 
 <!-- ══════ GENERATOR BAR ══════ -->
-<a href="#courses" class="gen-bar" style="display:flex;align-items:center;justify-content:center;gap:10px;flex-wrap:wrap;padding:11px 16px;background:linear-gradient(90deg,#B43E50,#D6586A,#E07A8A);color:#fff;text-decoration:none;font-family:inherit;font-size:15px;font-weight:700;text-align:center;line-height:1.5"> <span>🇦🇪 بمناسبة اليوم الوطني: خصم 55% على كل الدورات، حتى 3 ديسمبر فقط</span> <span style="background:#fff;color:#B43E50;border-radius:30px;padding:4px 14px;font-size:14px;white-space:nowrap">استفيدي الحين ←</span>
+<a href="#courses" class="gen-bar uae-bar" aria-label="خصم اليوم الوطني 55% على كل الدورات حتى 3 ديسمبر">
+<style>
+.uae-bar{display:flex;align-items:stretch;min-height:72px;background:#000;color:#fff;text-decoration:none;font-family:inherit;overflow:hidden}
+.uae-bar .uae-main{flex:1;display:flex;flex-direction:column;min-width:0}
+.uae-bar .uae-g{height:9px;background:#00843D}
+.uae-bar .uae-w{height:9px;background:#fff}
+.uae-bar .uae-ticker{flex:1;display:flex;align-items:center;overflow:hidden;direction:ltr;background:#000}
+.uae-bar .uae-track{display:flex;width:max-content;animation:uaeScroll 28s linear infinite}
+.uae-bar .uae-track span{direction:rtl;white-space:nowrap;padding:0 28px;font-size:20px;font-weight:800;line-height:1.4}
+.uae-bar .uae-red{flex:0 0 auto;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;padding:6px 20px;background:#EF3340;font-weight:900;font-size:18px;white-space:nowrap}
+.uae-bar .uae-cta{background:#fff;color:#EF3340;border-radius:30px;padding:3px 14px;font-size:14px;animation:uaePulse 1.6s ease-in-out infinite}
+.uae-bar:hover .uae-track{animation-play-state:paused}
+@keyframes uaeScroll{from{transform:translateX(-50%)}to{transform:translateX(0)}}
+@keyframes uaePulse{0%,100%{transform:scale(1)}50%{transform:scale(1.08)}}
+@media (prefers-reduced-motion:reduce){.uae-bar .uae-track,.uae-bar .uae-cta{animation:none}}
+@media (max-width:600px){.uae-bar{min-height:64px}.uae-bar .uae-track span{font-size:16px;padding:0 18px}.uae-bar .uae-red{font-size:14px;padding:6px 10px}.uae-bar .uae-cta{font-size:12px;padding:2px 10px}}
+.uae-flag{display:inline-block;width:27px;height:18px;vertical-align:-3px;border:1px solid rgba(255,255,255,.7);border-radius:2px;background:linear-gradient(to right,#EF3340 0 28%,transparent 28%),linear-gradient(#00843D 0 33.3%,#fff 33.3% 66.6%,#000 66.6%)}
+</style>
+<div class="uae-main"><div class="uae-g"></div><div class="uae-w"></div><div class="uae-ticker"><div class="uae-track"><span><i class="uae-flag" aria-hidden="true"></i> خصم 55% على كل الدورات حتى 3 ديسمبر فقط &nbsp;✦&nbsp; الباقة الكاملة بـ 315 درهم بدل 699 &nbsp;✦&nbsp; كل عام والإمارات بخير</span><span><i class="uae-flag" aria-hidden="true"></i> خصم 55% على كل الدورات حتى 3 ديسمبر فقط &nbsp;✦&nbsp; الباقة الكاملة بـ 315 درهم بدل 699 &nbsp;✦&nbsp; كل عام والإمارات بخير</span><span><i class="uae-flag" aria-hidden="true"></i> خصم 55% على كل الدورات حتى 3 ديسمبر فقط &nbsp;✦&nbsp; الباقة الكاملة بـ 315 درهم بدل 699 &nbsp;✦&nbsp; كل عام والإمارات بخير</span><span><i class="uae-flag" aria-hidden="true"></i> خصم 55% على كل الدورات حتى 3 ديسمبر فقط &nbsp;✦&nbsp; الباقة الكاملة بـ 315 درهم بدل 699 &nbsp;✦&nbsp; كل عام والإمارات بخير</span><span><i class="uae-flag" aria-hidden="true"></i> خصم 55% على كل الدورات حتى 3 ديسمبر فقط &nbsp;✦&nbsp; الباقة الكاملة بـ 315 درهم بدل 699 &nbsp;✦&nbsp; كل عام والإمارات بخير</span><span><i class="uae-flag" aria-hidden="true"></i> خصم 55% على كل الدورات حتى 3 ديسمبر فقط &nbsp;✦&nbsp; الباقة الكاملة بـ 315 درهم بدل 699 &nbsp;✦&nbsp; كل عام والإمارات بخير</span></div></div></div>
+<div class="uae-red"><span style="display:flex;align-items:center;gap:6px"><i class="uae-flag" aria-hidden="true"></i> اليوم الوطني</span><span class="uae-cta">استفيدي الحين ←</span></div>
 </a>
 
 <!-- ══════ NAVBAR ══════ -->
@@ -1476,7 +1495,7 @@ footer {
 <section class="section bundle-section" id="bundle">
   <div class="section-inner">
     <div class="section-header fade-in">
-      <span class="section-eyebrow"> عروض خاصة بمناسبة اليوم الوطني 🇦🇪</span>
+      <span class="section-eyebrow"> عروض خاصة بمناسبة اليوم الوطني <i class="uae-flag" aria-hidden="true"></i></span>
       <h2 class="section-title">عرض <span class="accent">الباقة الكاملة</span></h2>
       <p class="section-subtitle">استثمري في تطوير مهاراتك مع جميع الدورات الخمس ضمن باقة واحدة بسعر استثنائي (العرض حتى 3 ديسمبر)</p>
     </div>
