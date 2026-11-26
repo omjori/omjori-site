@@ -1,5 +1,6 @@
 {
   "redirects": [
+    { "source": "/", "destination": "https://academy.omjori.online/", "permanent": false },
     { "source": "/:path*", "destination": "https://academy.omjori.online/:path*", "permanent": false }
   ]
 }
